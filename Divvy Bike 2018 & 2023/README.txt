@@ -1,6 +1,12 @@
 This folder contains 2018 & 2023 Divvy Bike Trips data for the state Chicago.
-It contains Data sets selected
--
+The datasets are downloaded from an open source state govenmenrt poratl of Chicago.
+- https://data.cityofchicago.org/Transportation/Divvy-Trips/fg6s-gzvg/about_data
+
+It contains Data sets selected which are located in my google drive (Since the datasets are huge).
+- https://drive.google.com/drive/u/1/folders/1Zd3VK74N6E7yTtXouT3qFhGGWafNbEbb 
+- https://drive.google.com/drive/u/1/folders/1ZZwiLd9_fu0utV8O7CW-5P9PMAKXUd6_
+
 Cleaned Data sets 
-- 
-Python source code
+- https://drive.google.com/drive/u/1/folders/1FsHrnvsQe-OJBrS99-PlBHWyuW2zpcZe
+
+Python source code used for Data Cleaning and obtaining features for exploratory data analysis.
