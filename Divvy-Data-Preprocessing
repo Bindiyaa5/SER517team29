@@ -1,0 +1,25 @@
+# Convert the trip duration to minutes
+df['duration_minutes'] = (df['ended_at'] - df['started_at']).dt.total_seconds() / 60.0
+
+# Compute the mean duration for trips
+mean_duration = df['duration_minutes'].mean()
+
+# Define a function to calculate the distance in kilometers between two points
+def haversine_distance_km(row):
+    # Haversine formula to calculate distances
+    R = 6371  # Radius of the Earth in kilometers
+    delta_lat = np.radians(row['end_lat'] - row['start_lat'])
+    delta_lon = np.radians(row['end_lon'] - row['start_lon'])
+    a = np.sin(delta_lat/2)**2 + np.cos(np.radians(row['start_lat'])) * np.cos(np.radians(row['end_lat'])) * np.sin(delta_lon/2)**2
+    c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1-a))
+    distance = R * c
+    return distance
+
+# Apply the distance calculation for each trip
+df['distance_km'] = df.apply(haversine_distance_km, axis=1)
+
+# Calculate the average distance for trips
+mean_distance = df['distance_km'].mean()
+
+print(f'Average Trip Duration: {mean_duration:.2f} minutes')
+print(f'Average Trip Distance: {mean_distance:.2f} km')
