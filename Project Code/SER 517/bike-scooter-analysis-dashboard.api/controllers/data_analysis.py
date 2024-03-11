@@ -57,7 +57,7 @@ def calculate_metrics(file_pattern="path/to/your/csv/files/*-divvy-tripdata.csv"
 
 # If you wish to run and visualize directly from this script
 def main():
-    metrics = calculate_metrics(file_pattern="C:/Users/vbodavul/Downloads/archive (2)/202[23]*-divvy-tripdata.csv")
+    metrics = calculate_metrics(file_pattern="C:/Users/vbodavul/Downloads/archive (2)/202[2-4]*-divvy-tripdata.csv")
     print(metrics)
 
 if __name__ == "__main__":

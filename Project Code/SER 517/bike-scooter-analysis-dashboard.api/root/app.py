@@ -8,7 +8,7 @@ from controllers import DataSummary
 
 app = Flask(__name__)
 
-app.route('/api/data-summary', methods=['GET'])(DataSummary.data_summary)
+app.route('/api/data-summary', methods=['GET'])(DataSummary.data_summary())
 
 if __name__ == '__main__':
     app.run(debug=True)
