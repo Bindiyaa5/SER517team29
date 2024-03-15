@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/api/app.py",
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "env": {
+                "FLASK_APP": "api/app.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "1"
+            },
+            "jinja": true
+        }
+    ]
+}
