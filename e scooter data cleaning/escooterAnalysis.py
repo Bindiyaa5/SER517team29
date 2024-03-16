@@ -16,3 +16,6 @@ def plot_histogram(data, column):
     plt.ylabel('Frequency')
     return plt
 
+def correlation_matrix(data):
+    return data.corr()
+
