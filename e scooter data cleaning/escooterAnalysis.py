@@ -69,3 +69,17 @@ def popularStartAreas(df):
     plt.tight_layout()
     plt.show()
 
+def popularEndAreas(df):
+    df['distance_km'] = df.apply(lambda x: haversine_distance(x['Start Centroid Latitude'], x['Start Centroid Longitude'], x['End Centroid Latitude'], x['End Centroid Longitude']), axis=1)
+    df['Start Time'] = pd.to_datetime(df['Start Time'])
+    df['Month'] = df['Start Time'].dt.month.map(lambda x: calendar.month_name[x])
+    popular_end_areas = df['End Community Area Name'].value_counts().head(10)
+    plt.figure(figsize=(10, 6))
+    popular_end_areas.plot(kind='bar', color='salmon')
+    plt.title('Popular End Points (Community Area)')
+    plt.xlabel('Community Area')
+    plt.ylabel('Number of Trips')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+
