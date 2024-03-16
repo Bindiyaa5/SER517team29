@@ -2,7 +2,7 @@
 
 import streamlit as st
 import pandas as pd
-from escooterAnalysis import load_data, summary_statistics, plot_histogram, correlation_matrix, monthlyUsage
+from escooterAnalysis import load_data, summary_statistics, plot_histogram, correlation_matrix, monthlyUsage,popularStartAreas
 
 def load_data_cache(file_path):
     return load_data(file_path)
@@ -11,7 +11,7 @@ def load_data_cache(file_path):
 st.sidebar.title('Dashboard Options')
 
 # Selectbox for selecting analysis
-analysis_option = st.sidebar.selectbox('Select Analysis', ('Summary', 'Histogram', 'Correlation', 'MonthlyUsageTrends'))
+analysis_option = st.sidebar.selectbox('Select Analysis', ('Summary', 'Histogram', 'Correlation', 'MonthlyUsage', 'PopularStartAreas'))
 
 # Main content
 st.title('E-scooter trips data analysis dashboard')
@@ -35,12 +35,21 @@ elif analysis_option == 'Correlation':
     corr_matrix = correlation_matrix(data)
     st.write(corr_matrix)
 
-elif analysis_option == 'MonthlyUsageTrends':
-    st.write('## Monthly Usage Trends')
+elif analysis_option == 'MonthlyUsage':
+    st.write('## Monthly Usage')
     monthly = monthlyUsage(data)
     # st.write(monthly)
     st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot(monthly)
+
+elif analysis_option == 'PopularStartAreas':
+    st.write('## Populart Areas for starting point')
+    startpoint = popularStartAreas(data)
+    # st.write(monthly)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+    st.pyplot(startpoint)
+
+
 
 
 
