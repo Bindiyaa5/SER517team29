@@ -83,3 +83,20 @@ def popularEndAreas(df):
     plt.tight_layout()
     plt.show()
 
+def peakUsageHours(df):
+    df['distance_km'] = df.apply(lambda x: haversine_distance(x['Start Centroid Latitude'], x['Start Centroid Longitude'], x['End Centroid Latitude'], x['End Centroid Longitude']), axis=1)
+    df['Start Time'] = pd.to_datetime(df['Start Time'])
+    df['Month'] = df['Start Time'].dt.month.map(lambda x: calendar.month_name[x])
+    df['Hour'] = df['Start Time'].dt.hour
+
+    hourly_trip_counts = df.groupby('Hour').size()
+
+    plt.figure(figsize=(10, 6))
+    hourly_trip_counts.plot(kind='line', color='skyblue')
+    plt.title('Peak Usage Times')
+    plt.xlabel('Hour of the Day')
+    plt.ylabel('Number of Trips')
+    plt.xticks(range(24))
+    plt.grid(True)
+    plt.show()
+

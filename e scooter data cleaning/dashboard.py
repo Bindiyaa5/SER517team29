@@ -2,7 +2,7 @@
 
 import streamlit as st
 import pandas as pd
-from escooterAnalysis import load_data, summary_statistics, plot_histogram, correlation_matrix, monthlyUsage,popularStartAreas, popularEndAreas
+from escooterAnalysis import load_data, summary_statistics, plot_histogram, correlation_matrix, monthlyUsage,popularStartAreas, popularEndAreas, peakUsageHours
 
 def load_data_cache(file_path):
     return load_data(file_path)
@@ -11,7 +11,7 @@ def load_data_cache(file_path):
 st.sidebar.title('Dashboard Options')
 
 # Selectbox for selecting analysis
-analysis_option = st.sidebar.selectbox('Select Analysis', ('Summary', 'Histogram', 'Correlation', 'MonthlyUsage', 'PopularStartAreas' , 'PopularEndAreas'))
+analysis_option = st.sidebar.selectbox('Select Analysis', ('Summary', 'Histogram', 'Correlation', 'MonthlyUsage', 'PopularStartAreas' , 'PopularEndAreas', 'PeakUsageHours'))
 
 # Main content
 st.title('E-scooter trips data analysis dashboard')
@@ -55,6 +55,15 @@ elif analysis_option == 'PopularEndAreas':
     # st.write(monthly)
     st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot(endpoint)
+
+
+
+elif analysis_option == 'PeakUsageHours':
+    st.write('## Peak Usage Hours')
+    peak = peakUsageHours(data)
+    # st.write(monthly)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+    st.pyplot(peak)
 
     
 
