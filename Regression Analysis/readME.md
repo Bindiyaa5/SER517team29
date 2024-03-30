@@ -27,3 +27,16 @@ Optimization terminated successfully.
 
 ************
 0.6007634868976183
+
+Feature: Duration(in Minutes)
+poisson regression's rmse value
+0.6498363026876407
+PR train r2 and rmse
+0.621710253552746
+PR test r2 and rmse
+Optimization terminated successfully.
+         Current function value: 0.838181
+         Iterations 4
+
+************
+0.1715606361311433
