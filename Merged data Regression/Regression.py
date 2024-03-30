@@ -202,3 +202,21 @@ merged_df.isna().sum()
 # PR test r2 and rmse
 # Current function value - 0.825330
 # 21 iterations
+
+# Feature - Duration
+# poisson regression's rmse value - 0.6498363026876407
+# PR train r2 and rmse
+# 0.621710253552746
+# PR test r2 and rmse
+# Current function value - 0.838181
+# 4 iterations
+
+# ************
+# 0.1715606361311433
+
+# Total number of rows Predictions ran:
+# transportation
+# bike        20723
+# escooter    20723
+# Name: count, dtype: int64
+# (41446, 10)
