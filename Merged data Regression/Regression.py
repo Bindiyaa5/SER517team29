@@ -186,7 +186,19 @@ merged_df.isna().sum()
 # Feature - Season(Fall,Spring,Summer,Winter)
 # Output:
 # poisson regression's rmse value - 0.6498363026876407
-# PR train r2 and rmse - 0.6206216477419998
+# PR train r2 and rmse
+# 0.6206216477419998
 # PR test r2 and rmse
-# Current function value: 0.839196
-# 4 iterations        
+# Current function value -  0.839196
+# 4 iterations     
+
+# ------------------------
+# 0.18146967366696876
+
+# Feature- distance
+# poisson regression's rmse value - 0.47357049534293666
+# PR train r2 and rmse
+# 0.47357991294480567
+# PR test r2 and rmse
+# Current function value - 0.825330
+# 21 iterations
