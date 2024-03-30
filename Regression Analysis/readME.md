@@ -40,3 +40,10 @@ Optimization terminated successfully.
 
 ************
 0.1715606361311433
+
+Total number of rows Predictions ran:
+transportation
+bike        20723
+escooter    20723
+Name: count, dtype: int64
+(41446, 10)
