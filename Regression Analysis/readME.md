@@ -15,3 +15,15 @@ Optimization terminated successfully.
 ************
 0.18146967366696876
 
+Feature: distance
+poisson regression's rmse value
+0.47357049534293666
+PR train r2 and rmse
+0.47357991294480567
+PR test r2 and rmse
+Optimization terminated successfully.
+         Current function value: 0.825330
+         Iterations 21
+
+************
+0.6007634868976183
