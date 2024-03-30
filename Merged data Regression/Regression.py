@@ -181,3 +181,12 @@ final_merged_df = pd.merge(merged_df, final_temp, on='ride_id')
 final_merged_df.shape
 final_merged_df.columns
 merged_df.isna().sum()
+
+
+# Feature - Season(Fall,Spring,Summer,Winter)
+# Output:
+# poisson regression's rmse value - 0.6498363026876407
+# PR train r2 and rmse - 0.6206216477419998
+# PR test r2 and rmse
+# Current function value: 0.839196
+# 4 iterations        
