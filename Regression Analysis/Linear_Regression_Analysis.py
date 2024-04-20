@@ -4,7 +4,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-data = pd.read_csv('/Users/naresh/Downloads/mergedDatan.csv')
+data = pd.read_csv('/Users/Bindiya/SER517/mergedData.csv')
 data['started_at'] = pd.to_datetime(data['started_at'])
 
 def get_part_of_day(hour):
