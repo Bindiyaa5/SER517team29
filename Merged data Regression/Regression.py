@@ -220,3 +220,5 @@ merged_df.isna().sum()
 # escooter    20723
 # Name: count, dtype: int64
 # (41446, 10)
+
+
