@@ -1,0 +1,5 @@
+The data can be found at 
+https://drive.google.com/file/d/1Yx8S86BsbYvzgICbDYHJZVEmOarVRgZ9/view?usp=share_link
+
+Collected temperature data spanning from Jan 2022 to Dec 2023 to enhance our model's accuracy. This dataset includes both the daily maximum and minimum temperatures recorded, which are crucial for our ongoing analysis of how weather data can influence Bike Sharing Tendency. 
+Data sourced from the National Centers for Environmental Information(https://www.ncei.noaa.gov).
