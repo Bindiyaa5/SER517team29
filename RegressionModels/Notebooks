@@ -1,1 +1,6 @@
 This folder has all the finalized notebooks with required code
+
+The DataPreparation.ipynb has all the code for data preparation
+notebookae226ab9f4(2).ipynb has all the code related to mlr and random forest models.
+
+Ui.py has the code related to dashboard
