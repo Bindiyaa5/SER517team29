@@ -1,0 +1,9 @@
+plotly
+dash
+pandas
+numpy
+scikit-learn
+matplotlib
+notebook
+streamlit
+seaborn
