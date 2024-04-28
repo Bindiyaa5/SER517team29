@@ -20,7 +20,7 @@ Installation Steps:
 4.	Create and Activate a Virtual Environment (Optional but Recommended):
 <br>  •	It's a good practice to work within a virtual environment to isolate the project dependencies. This step is optional but recommended.
 <br>  •	Create a virtual environment by running the following command:
-<br>  </b>    python -m venv myenv 
+<br>  <b>    python -m venv myenv </b>
 <br>  •	Activate the virtual environment:
 <br>  •	On Windows: myenv\Scripts\activate 
 <br>  •	On macOS/Linux: source myenv/bin/activate
