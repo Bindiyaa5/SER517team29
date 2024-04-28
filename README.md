@@ -26,11 +26,11 @@ Installation Steps:
 <br>  •	On macOS/Linux: source myenv/bin/activate
 5.	Install Required Python Libraries:
 <br>  •	Once inside the project directory, install the required Python libraries specified in the requirements.txt file using pip: 
-<br> </b>  pip install -r requirements.txt 
+<br> <b>  pip install -r requirements.txt </b>
 <br>  •	This command will install the necessary libraries such as Streamlit, pandas, matplotlib, seaborn, and numpy.
 6.	Run the Streamlit Application:
 <br>  •	After installing the dependencies, you can run the Streamlit application by executing the following command in the command-line interface:
-<br> </b>     streamlit run app.py 
+<br> <b>     streamlit run app.py </b>
 <br>  •	This command will start the Streamlit server locally, and you will see output indicating that the server is running.
 <br>  •	Open a web browser and navigate to the URL provided in the output (usually http://localhost:8501) to access the dashboard interface.
 
